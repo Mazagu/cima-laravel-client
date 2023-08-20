@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace Bluesourcery\Cima\Models;
 
@@ -16,7 +16,7 @@ class MedicationList
         $this->totalRows = $data['totalFilas'];
         $this->currentPage = $data['pagina'];
         $this->pageSize = $data['tamanioPagina'];
-        
+
         $medicationData = $data['resultados'] ?? [];
         $this->medications = $this->mapMedications($medicationData);
     }
