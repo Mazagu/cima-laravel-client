@@ -17,7 +17,7 @@ Install the library using Composer:
 
 ```bash
 composer require your-username/your-library
-
+```
 ## How to Use
 
 ### Find Medication by ID
@@ -31,7 +31,7 @@ try {
 } catch (HttpException $e) {
     // Handle HTTP exceptions
 }
-
+```
 ### Retrieve List of Medications
 
 ```php
@@ -42,7 +42,7 @@ try {
 } catch (HttpException $e) {
     // Handle HTTP exceptions
 }
-
+```
 ## Contributing
 
 If you'd like to contribute to this library, please follow these steps:
