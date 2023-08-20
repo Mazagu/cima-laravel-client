@@ -1,6 +1,6 @@
 <?php 
 
-namespace Bluesourcery\Cima\Domain\Model;
+namespace Bluesourcery\Cima\Models;
 
 use Illuminate\Support\Collection;
 

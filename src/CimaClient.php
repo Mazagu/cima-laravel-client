@@ -1,13 +1,13 @@
 <?php
 
-namespace Bluesourcery\Cima\Domain\Repository;
+namespace Bluesourcery\Cima;
 
-use Bluesourcery\Cima\Domain\Exception\HttpException;
-use Bluesourcery\Cima\Domain\Model\Medication;
-use Bluesourcery\Cima\Domain\Model\MedicationList;
+use Bluesourcery\Cima\Exceptions\HttpException;
+use Bluesourcery\Cima\Models\Medication;
+use Bluesourcery\Cima\Models\MedicationList;
 use GuzzleHttp\Client;
 
-class CimaRepository implements CimaRepositoryInterface
+class CimaClient implements CimaClientInterface
 {
     const BASE_URL = 'https://cima.aemps.es/cima/rest';
 

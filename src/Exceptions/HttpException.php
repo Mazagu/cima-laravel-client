@@ -1,6 +1,6 @@
 <?php 
 
-namespace Bluesourcery\Cima\Domain\Exception;
+namespace Bluesourcery\Cima\Exceptions;
 
 use Exception;
 

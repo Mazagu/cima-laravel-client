@@ -2,15 +2,15 @@
 
 namespace Bluesourcery\Tests\Unit;
 
-use Bluesourcery\Cima\Domain\Exception\HttpException;
-use Bluesourcery\Cima\Domain\Model\Medication;
-use Bluesourcery\Cima\Domain\Repository\CimaRepository;
+use Bluesourcery\Cima\Exceptions\HttpException;
+use Bluesourcery\Cima\Models\Medication;
+use Bluesourcery\Cima\CimaClient;
 use Bluesourcery\Tests\TestCase;
 use GuzzleHttp\Client;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\Psr7\Response;
 
-class CimaRepositoryTest extends TestCase
+class CimaClientTest extends TestCase
 {
     /** @test */
     public function it_can_find_a_medication()
@@ -21,8 +21,8 @@ class CimaRepositoryTest extends TestCase
 
         $client = new Client(['handler' => $mockHandler]);
 
-        $cimaRepository = new CimaRepository($client);
-        $medication = $cimaRepository->find(1);
+        $cimaClient = new CimaClient($client);
+        $medication = $cimaClient->find(1);
         $this->assertInstanceOf(Medication::class, $medication);
     }
 
@@ -35,10 +35,10 @@ class CimaRepositoryTest extends TestCase
 
         $client = new Client(['handler' => $mockHandler]);
 
-        $cimaRepository = new CimaRepository($client);
+        $cimaClient = new CimaClient($client);
         $this->expectException(HttpException::class);
         $this->expectExceptionMessage('Medication not found');
-        $cimaRepository->find(1);
+        $cimaClient->find(1);
     }
 
     /** @test */
@@ -50,8 +50,8 @@ class CimaRepositoryTest extends TestCase
 
         $client = new Client(['handler' => $mockHandler]);
 
-        $cimaRepository = new CimaRepository($client);
-        $medicationList = $cimaRepository->all();
+        $cimaClient = new CimaClient($client);
+        $medicationList = $cimaClient->all();
         $this->assertInstanceOf(Medication::class, $medicationList->medications->first());
     }
 }
