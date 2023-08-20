@@ -21,7 +21,7 @@ class CimaRepository implements CimaRepositoryInterface
      */
     public function find($id): Medication
     {
-        $response = $this->client->get("{self::BASE_URL}/medicamento?nregistro=$id");
+        $response = $this->client->get(self::BASE_URL . "/medicamento?nregistro=$id");
         $data = json_decode($response->getBody()->getContents(), true);
         
         if($response->getStatusCode() !== 200) {
@@ -35,7 +35,7 @@ class CimaRepository implements CimaRepositoryInterface
 
     public function all(): MedicationList
     {
-        $response = $this->client->get("{self::BASE_URL}/medicamentos");
+        $response = $this->client->get(self::BASE_URL . "/medicamentos");
         $data = json_decode($response->getBody()->getContents(), true);
         
         if($response->getStatusCode() !== 200) {
