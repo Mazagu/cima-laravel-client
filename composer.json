@@ -1,0 +1,32 @@
+{
+  "name": "bluesourcery/cima-laravel-client",
+  "description": "Laravel client to abstract REST calls to CIMA's API",
+  "type": "library",
+  "license": "GNU GPL v3.0",
+  "authors": [
+    {
+      "name": "Mario Zabala",
+      "email": "mario@bluesourcery.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Bluesourcery\\Cima\\": "src/",
+      "Bluesourcery\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.9.0",
+    "phpunit/phpunit": "^10.3.2"
+  },
+    "extra": {
+      "laravel": {
+          "providers": [
+            "Bluesourcery\\Cima\\CimaServiceProvider"
+          ]
+      }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.7"
+  }
+}
