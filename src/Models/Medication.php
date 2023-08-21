@@ -56,8 +56,8 @@ class Medication
         $this->setHasNotes($data['notas']);
         $this->setHasInformationMaterials($data['materialesInf']);
         $this->setHasEmaApproval($data['ema']);
-        $this->setDocuments($data['docs']);
-        $this->setPhotos($data['fotos']);
+        $this->setDocuments($data['docs'] ?? []);
+        $this->setPhotos($data['fotos'] ?? []);
         $this->setAtcs($data['atcs'] ?? []);
         $this->setActivePrinciples($data['principiosActivos'] ?? []);
         $this->setExcipients($data['excipientes'] ?? []);

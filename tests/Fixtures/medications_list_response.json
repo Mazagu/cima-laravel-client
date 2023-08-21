@@ -1732,34 +1732,6 @@
             "notas": false,
             "materialesInf": false,
             "ema": false,
-            "docs": [
-                {
-                    "tipo": 1,
-                    "url": "https://cima.aemps.es/cima/pdfs/ft/67988/FT_67988.pdf",
-                    "urlHtml": "https://cima.aemps.es/cima/dochtml/ft/67988/FT_67988.html",
-                    "secc": true,
-                    "fecha": 1600239084000
-                },
-                {
-                    "tipo": 2,
-                    "url": "https://cima.aemps.es/cima/pdfs/p/67988/P_67988.pdf",
-                    "urlHtml": "https://cima.aemps.es/cima/dochtml/p/67988/P_67988.html",
-                    "secc": true,
-                    "fecha": 1659048892000
-                }
-            ],
-            "fotos": [
-                {
-                    "tipo": "materialas",
-                    "url": "https://cima.aemps.es/cima/fotos/thumbnails/materialas/67988/67988_materialas.jpg",
-                    "fecha": 1570104036000
-                },
-                {
-                    "tipo": "formafarmac",
-                    "url": "https://cima.aemps.es/cima/fotos/thumbnails/formafarmac/67988/67988_formafarmac.jpg",
-                    "fecha": 1570104038000
-                }
-            ],
             "viasAdministracion": [
                 {
                     "id": 48,
